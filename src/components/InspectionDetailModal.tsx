@@ -41,13 +41,6 @@ export default function InspectionDetailModal({
     }
   })();
 
-  // แปลง view URL เป็น thumbnail URL
-  const getThumbnail = (viewUrl: string) => {
-    const match = viewUrl.match(/\/d\/(.*?)\//);
-    if (!match) return null;
-    return `https://drive.google.com/thumbnail?id=${match[1]}&sz=w400`;
-  };
-
   return (
     <Modal open={!!data} onClose={onClose} size="sm">
       <Modal.Header>
