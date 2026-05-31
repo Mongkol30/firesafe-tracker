@@ -27,40 +27,65 @@
 | Deployment | Vercel |
 
 ## 📁 Project Structure
-src/
-├── components/
-│   ├── InspectionDetailModal.tsx
-│   ├── DriveImage.tsx
-│   └── QRScanner.tsx
-├── hooks/
-│   ├── useGoogleAuth.ts
-│   └── useCurrentUser.ts
-├── layouts/
-│   └── MainLayout.tsx
-├── pages/
-│   ├── DashboardPage.tsx
-│   ├── HistoryPage.tsx
-│   ├── InspectionPage.tsx
-│   ├── LoginPage.tsx
-│   └── master/
-│       ├── ExtinguisherPage.tsx
-│       ├── ExtinguisherTypePage.tsx
-│       ├── LocationPage.tsx
-│       └── UserPage.tsx
-├── services/
-│   ├── dashboardService.ts
-│   ├── driveService.ts
-│   ├── extinguisherService.ts
-│   ├── historyService.ts
-│   ├── locationService.ts
-│   ├── qrService.ts
-│   ├── sheetAuth.ts
-│   ├── typeService.ts
-│   └── userService.ts
-├── types/
-│   └── auth.ts
-└── utils/
-└── formatDate.ts
+
+```
+firesafe-tracker/
+├── public/
+├── src/
+│   ├── components/
+│   │   ├── DriveImage.tsx          # แสดงรูปจาก Google Drive
+│   │   ├── InspectionDetailModal.tsx # Modal รายละเอียดการตรวจ
+│   │   └── QRScanner.tsx           # สแกน QR Code
+│   │
+│   ├── hooks/
+│   │   ├── useCurrentUser.ts       # ดึงข้อมูล user จาก Sheet
+│   │   └── useGoogleAuth.ts        # จัดการ Google OAuth
+│   │
+│   ├── layouts/
+│   │   └── MainLayout.tsx          # Layout หลัก (Sidebar + Topbar)
+│   │
+│   ├── pages/
+│   │   ├── DashboardPage.tsx       # หน้า Dashboard
+│   │   ├── HistoryPage.tsx         # หน้าประวัติการตรวจ
+│   │   ├── InspectionPage.tsx      # หน้ากรอกผลตรวจ
+│   │   ├── LoginPage.tsx           # หน้า Login
+│   │   └── master/
+│   │       ├── ExtinguisherPage.tsx      # จัดการถังดับเพลิง
+│   │       ├── ExtinguisherTypePage.tsx  # จัดการประเภทถัง
+│   │       ├── LocationPage.tsx          # จัดการตำแหน่งที่ตั้ง
+│   │       └── UserPage.tsx             # จัดการผู้ใช้งาน
+│   │
+│   ├── services/
+│   │   ├── dashboardService.ts     # API Dashboard
+│   │   ├── driveService.ts         # Google Drive API
+│   │   ├── extinguisherService.ts  # API ถังดับเพลิง
+│   │   ├── historyService.ts       # API ประวัติการตรวจ
+│   │   ├── locationService.ts      # API ตำแหน่งที่ตั้ง
+│   │   ├── qrService.ts            # สร้าง QR URL
+│   │   ├── sheetAuth.ts            # เช็คสิทธิ์ Google Sheets
+│   │   ├── typeService.ts          # API ประเภทถัง
+│   │   └── userService.ts          # API ผู้ใช้งาน
+│   │
+│   ├── types/
+│   │   └── auth.ts                 # TypeScript types
+│   │
+│   ├── utils/
+│   │   └── formatDate.ts           # แปลง format วันที่
+│   │
+│   ├── App.tsx                     # Root component + Routes
+│   └── main.tsx                    # Entry point
+│
+├── apps-script/
+│   └── Code.gs                     # Google Apps Script
+│
+├── .env                            # Environment variables (ไม่ push)
+├── .gitignore
+├── README.md
+├── index.html
+├── package.json
+├── tsconfig.json
+└── vite.config.ts
+```
 
 ## 🚀 Getting Started
 
