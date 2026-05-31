@@ -1,0 +1,30 @@
+
+
+.rs-sidenav-item:hover {
+  color: aliceblue !important;
+  background: #ba0b1ad6 !important;
+}
+
+.rs-sidenav[data-appearance="subtle"]
+  .rs-sidenav-item[data-active="true"] {
+  background-color: #ba0b1ad6 !important;
+  color: white !important;
+}
+
+/* text */
+.rs-sidenav[data-appearance="subtle"]
+  .rs-sidenav-item[data-active="true"]
+  .rs-sidenav-item-content {
+  color: white !important;
+}
+
+/* icon */
+.rs-sidenav[data-appearance="subtle"]
+  .rs-sidenav-item[data-active="true"]
+  .rs-icon {
+  color: white !important;
+}
+
+.rs-sidenav-item-content {
+  transition: all 0.2s ease;
+}
