@@ -54,7 +54,7 @@ function InspectionPage({ currentUser, accessToken }: Props) {
 
   const emptyForm = () => ({
     action: "saveData",
-    timestamp: new Date().toLocaleString('en-US'),
+    timestamp: new Date().toLocaleString("en-US"),
     inspectorName,
     extinguisherNo: "",
     tankCondition: "PASS",
@@ -468,7 +468,7 @@ function InspectionPage({ currentUser, accessToken }: Props) {
           <div style={{ fontSize: 12, color: "#888", marginBottom: 6 }}>
             วันที่ตรวจ
           </div>
-          <Input value={formData.timestamp} disabled />
+          <Input value={formatDate(formData.timestamp)} disabled />
         </div>
         <div>
           <div style={{ fontSize: 12, color: "#888", marginBottom: 6 }}>
